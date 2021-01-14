@@ -1,0 +1,24 @@
+<div>
+    <input type="checkbox" id="parent">
+</div>
+<div>
+    <input type="checkbox" id="child">
+</div>
+<div>
+    <input type="checkbox" id="child">
+</div>
+
+<script>
+    var checkBoxParent = document.querySelector('#parent');
+    checkBoxParent.onchange = function(){
+        // 1. tìm tất cả các thẻ input checkbox #child
+        var childList = document.querySelectorAll('#child');
+        // 2. xác định trạng thái checked của #parent
+        var parentStatus = checkBoxParent.checked;
+        // 3. gán lại giá trị cho thuộc tính checked của tất cả #child
+        // bằng giá trị vừa lấy được của #parent
+        for(var i = 0; i < childList.length; i++){
+            childList[i].checked = parentStatus;
+        }
+    }
+</script>

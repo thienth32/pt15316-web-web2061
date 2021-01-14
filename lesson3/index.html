@@ -1,0 +1,59 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script>
+
+    var quan = {
+        name: "Nguyễn Văn Quân",
+        rollNumber: "PH07132",
+        hometown: "Mê Linh",
+        score: 6.9,
+        updateScrore: function(newScore){
+            this.score = newScore
+        },
+        toString: function(){
+            console.log(`Họ và tên: ${this.name} - MSSV: ${this.rollNumber}`);
+        }
+    }
+
+    console.log(quan.score);
+    quan.toString();
+
+    /*
+    var a = moment("2018-06-15");
+    var b = moment();
+    document.write(b.diff(a, 'months') + " tháng");
+    
+    */
+
+
+
+   var sinhvien = {
+        ma_sinh_vien: "PH01679",
+        ho_va_ten: "Trần Hữu Thiện",
+        lop: "PC515",
+        ngay_nhap_hoc: "2019-07-01",
+        diem_trung_binh: 6.7,
+        tinhHocLuc: function(){
+            if(this.diem_trung_binh < 5){
+                return "Học lực yếu";
+            }else if(this.diem_trung_binh >= 7 && this.diem_trung_binh < 7){
+                return "Học lực trung bình";
+            }else if(this.diem_trung_binh >= 7 && this.diem_trung_binh < 8){
+                return "Học lực khá";
+            }else{
+                return "Học lực giỏi";
+            }
+        },
+        thoiGianRaTruong: function(){
+            // tính số tháng tính từ thời điểm nhập học cho đến nay
+            var now = moment();
+            var tgNhapHoc = moment(this.ngay_nhap_hoc);
+            var soThangDaDiHoc = now.diff(tgNhapHoc, 'months');
+            if(soThangDaDiHoc >= 28){
+                return "Đã ra trường rồi";
+            }else {
+                return `Bạn còn phải đi học ${28-soThangDaDiHoc} tháng nữa`;
+            }
+        }
+   }
+   document.write(sinhvien.thoiGianRaTruong());
+</script>

@@ -1,0 +1,45 @@
+<script>
+    // cho mảng arr = [2, 2, 6, 3, 8, 11, 17, 8, 17]
+    // 1. tạo ra mảng arr2 chứa các phần tử là số lẻ từ mảng gốc
+    // 2. tạo ra mảng arr3 chứa các phần tử là 
+    // số bị trùng lặp trong mảng gốc
+    // 3. đếm số lần xuất hiện của các giá trị trong mảng
+    // ví dụ 
+    // 2 => 2
+    // 6 => 1
+    // 3 => 1
+    // 8 => 2
+    var arr = [2, 2, 6, 3, 8, 11, 17, 8, 17];
+    // var arr2 = arr.filter(function(val, ind){
+    //     return val%2!=0;
+    // });
+    var arr2 = [];
+    arr.forEach(function(val, ind){
+        if(val%2!=0){
+            arr2.push(val);
+        }
+    });
+    // console.log(arr2);
+    
+    var arr3_1 = arr.filter(function(val, ind){
+        var count = 0;
+        arr.forEach(function(item){
+            if(val == item){
+                count++;
+            }
+        })
+
+        if(count > 1){
+            return val;
+        }
+    });
+    console.log(arr3_1);
+
+    var arr3 = arr3_1.filter(function(item, pos) {
+        return arr3_1.indexOf(item) == pos;
+    })
+
+    console.log(arr3);
+    
+
+</script>

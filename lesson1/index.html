@@ -1,0 +1,29 @@
+<div>
+    content here!
+</div>
+
+<div>
+    content 2
+</div>
+
+<br>
+<input type="number" id="js-nang-cao" value="0">
+
+<script>
+
+    // cái gì là DOM
+    // var divTag = document.querySelectorAll('div');
+    // for(var i = 0; i < divTag.length; i++){
+    //     divTag[i].style.color = 'red';
+    // }
+    // 1. dùng hàm setinterval => đk 1s (1000)
+    // 2. xác định thẻ input cần tác động đến
+    // 3. gán lại giá trị của thẻ
+    var defaultValue = 0;
+    setInterval(function(){
+        var theInput = document.querySelector('#js-nang-cao');
+        theInput.value = defaultValue + 1;
+        defaultValue = defaultValue + 1;
+    }, 1000);
+
+</script>

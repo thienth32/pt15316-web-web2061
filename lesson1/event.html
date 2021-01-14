@@ -1,0 +1,22 @@
+<input type="text" style="outline: none;">
+<h2></h2>
+<script>
+
+    document.querySelector('input').onfocus = function(){
+        this.style.border = "1px solid red";
+    }
+
+    document.querySelector('input').onblur = function(){
+        console.log('da xay ra su kien on blur');
+        this.style.border = "1px solid black";
+    }
+
+    document.querySelector('input').onkeyup = function(){
+        document.querySelector('h2').innerText = this.value;
+    }
+
+    // document.querySelector('input').onchange = function(){
+    //     document.querySelector('h2').innerText = this.value;
+    // }
+
+</script>

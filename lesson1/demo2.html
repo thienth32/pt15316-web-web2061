@@ -1,0 +1,25 @@
+<div class="target"></div>
+<style>
+    .target{
+        width: 60px;
+        height: 60px;
+        border: 1px solid #000;
+    }
+</style>
+<script>
+    // đỏ, vàng, xanh lá cây
+    // cứ sau 2s thì màu nền của thẻ 
+    // div.target sẽ đổi luân phiên
+    var bgArr = ['red', 'yellow', 'green'];
+    var indexBg = 0;
+
+    setInterval(function(){
+        document.querySelector('.target').style.background = bgArr[indexBg];
+        indexBg++;
+
+        if(indexBg > bgArr.length-1){
+            indexBg=0;
+        }
+
+    }, 500);
+</script>
