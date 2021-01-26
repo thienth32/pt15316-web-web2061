@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyshop</title>
+</head>
+<body>
+    <div class="header">
+        <ul class="menu"></ul>
+    </div>
+
+    <script>
+        // tạo hàm để lấy danh sách danh mục sử dụng để làm menu
+        const apiUrl = "http://localhost:3000/";
+        fetch(`${apiUrl}categories`)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(cates){
+            // dùng vòng lặp để add thẻ html vào trong thẻ ul.menu
+            console.log(cates);
+            var menuContent = ``;
+            cates.forEach(function(item){
+                menuContent += `<li>${item.name}</li>`
+            });
+            document.querySelector('.menu').innerHTML = menuContent;
+        });
+    </script>
+</body>
+</html>
