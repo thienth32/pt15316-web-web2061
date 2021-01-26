@@ -1,0 +1,16 @@
+<script>
+    debugger;
+    var projectData = {};
+    fetch('data.json')
+    .then(response => response.json())
+    .then(jsonData => {
+        debugger;
+        console.log(jsonData);
+        projectData = jsonData;
+        document.write(projectData.name);
+    });
+    
+    
+
+
+</script>

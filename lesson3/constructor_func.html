@@ -1,0 +1,37 @@
+<script>
+
+    function SinhVien(mssv, hoten, lop, diem){
+        this.mssv = mssv;
+        this.hoten = hoten;
+        this.lop = lop;
+        this.diem = diem;
+        this.diemtrungbinh = function(){
+            var tongdiem = 0;
+            this.diem.forEach(function(item){
+                tongdiem += item.diem;
+            });
+
+            return tongdiem/this.diem.length;
+        }
+    }
+
+    var linh = new SinhVien(
+        "PH01234",
+        "Nguyễn Văn Linh",
+        "PT15316-WEB",
+        [
+            {
+                mamon: "WEB2061",
+                tenmon: "Javascript Nâng cao",
+                diem: 6.5
+            },
+            {
+                mamon: "WEB102",
+                tenmon: "Lập trình PHP1",
+                diem: 8
+            }
+        ]
+    );
+    console.log(linh);
+
+</script>

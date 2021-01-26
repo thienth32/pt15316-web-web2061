@@ -1,0 +1,15 @@
+<ul></ul>
+<script>
+    fetch('http://localhost:3000/posts')
+    .then(response => response.json())
+    .then(posts => {
+        var ul = document.querySelector('ul');
+        var content = ``;
+        posts.forEach(element => {
+            content += `<li>${element.title}</li>`
+        });
+        ul.innerHTML = content;
+    })
+
+
+</script>

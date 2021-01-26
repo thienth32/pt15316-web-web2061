@@ -1,0 +1,14 @@
+{
+    "name": "thienth",
+    "age": 30,
+    "score": [
+        {
+            "subject_name": "Lập trình javascript cơ bản",
+            "score": 7
+        },
+        {
+            "subject_name": "Lập trình javascript nâng cao",
+            "score": 5
+        }
+    ]
+}

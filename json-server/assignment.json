@@ -1,0 +1,43 @@
+{
+    "categories": [
+        {"id": 1, "name": "Xiaomi"},
+        {"id": 2, "name": "Apple"}
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Xiaomi Mi 10T Pro 5G",
+            "cateId": 1,
+            "price": 12000000,
+            "detail": "",
+            "image": "https://mivietnam.vn/wp-content/uploads/2020/12/dien-thoai-xiaomi-mi-10t-pro-avarta-377x470.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Xiaomi Redmi Note 9 Pro",
+            "cateId": 1,
+            "price": 6490000,
+            "detail": "",
+            "image": "https://mivietnam.vn/wp-content/uploads/2020/12/dien-thoai-xiaomi-redmi-note-9-avarta14.jpg"
+        }
+    ],
+    "orders": [
+        {
+            "id": 1,
+            "customer_name": "Trần Hữu Thiện",
+            "customer_address": "Hà Nội",
+            "customer_email": "thienth@fpt.edu.vn",
+            "customer_phone_number": "0987654321",
+            "created_date": "",
+            "status": 1
+        }
+    ],
+    "order_details": [
+        {
+            "orderId": 1,
+            "productId": 2,
+            "quantity": 1,
+            "unit_price": 6490000
+        }
+    ]
+}

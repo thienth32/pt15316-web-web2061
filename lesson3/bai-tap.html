@@ -1,0 +1,28 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script>
+    function VanDongVien(
+        ma_van_dong_vien, 
+        ho_va_ten, 
+        ngay_sinh, 
+        giai_thuong){
+
+        this.ma_van_dong_vien = ma_van_dong_vien;
+        this.ho_va_ten = ho_va_ten;
+        this.ngay_sinh = ngay_sinh; 
+        this.giai_thuong = giai_thuong;
+        
+        this.kiemTraDieuKien = function(ngay_to_chuc, so_tuoi_du_dk){
+            var objNgayToChuc = moment(ngay_to_chuc);
+            var objNgaySinh = moment(this.ngay_sinh);
+
+            var thang_du_dk = so_tuoi_du_dk*12;
+            var thang_sinh_vdv = objNgayToChuc.diff(objNgaySinh, 'months');
+            return thang_sinh_vdv > thang_du_dk;
+        }
+    }
+
+    var nam = new VanDongVien('001', 'nguyen van nam', '2005-06-02', []);
+    console.log(nam.kiemTraDieuKien('2020-07-03', 15));
+
+
+</script>
