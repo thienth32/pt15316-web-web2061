@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">name</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <button id="insert">Tạo mới</button>
+    </div>
+
+    <script>
+        const apiUrl = "http://localhost:3000/";
+        document.querySelector('#insert').onclick = function(){
+            var data = {
+                name: document.querySelector('#name').value
+            };
+            
+            fetch(`${apiUrl}categories`, {
+                method: "post",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(jsonData => {
+                console.log(jsonData);
+            })
+        }
+    </script>
+</body>
+</html>
