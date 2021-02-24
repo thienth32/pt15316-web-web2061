@@ -11,6 +11,10 @@
     {
       "name": "Samsung",
       "id": 3
+    },
+    {
+      "name": "Huawei",
+      "id": 4
     }
   ],
   "products": [
@@ -25,10 +29,18 @@
     {
       "id": 2,
       "name": "Xiaomi Redmi Note 9 Pro",
-      "categoryId": 2,
+      "categoryId": 1,
       "price": 6490000,
       "detail": "",
       "image": "https://mivietnam.vn/wp-content/uploads/2020/12/dien-thoai-xiaomi-redmi-note-9-avarta14.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Iphone X",
+      "categoryId": 2,
+      "price": 16000000,
+      "detail": "",
+      "image": "https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
     }
   ],
   "orders": [

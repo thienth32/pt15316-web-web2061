@@ -15,5 +15,28 @@ window.util = {
             });
             document.querySelector('.navbar-nav').innerHTML = menuContent;
         });
+    },
+    getProducts: function(appendTarget){
+        fetch(`${this.apiUrl}products?_expand=category`)
+        .then(response => response.json())
+        .then(products => {
+            console.log(products)
+            let content = ``;
+            products.forEach(pro => {
+                content += `<div class="col-3">
+                                <div class="card" style="width: 100%;">
+                                    <img src="${pro.image}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title">${pro.name}</h5>
+                                    <p>Giá: ${pro.price}đ</p>
+                                    <p>Hãng sản xuất: ${pro.category.name}</p>
+                                    <a href="javascript:;" class="btn btn-warning">Chi tiết</a>
+                                    <a href="javascript:;" class="btn btn-success"> <i class="fas fa-shopping-cart"></i> Thêm</a>
+                                    </div>
+                                </div>
+                            </div>`;
+            });
+            document.querySelector(appendTarget).innerHTML = content;
+        })
     }
 }

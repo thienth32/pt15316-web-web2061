@@ -24,12 +24,15 @@
                         
                     </ul>
                 </div>
+                <button type="button" class="btn btn-info text-white">
+                    <i class="fas fa-shopping-cart"></i> <span class="badge bg-secondary">0</span>
+                </button>
             </div>
         </nav>
     </header>
     <main class="container-fluid">
         <h2 class="text-info">Sản phẩm</h2>
-        <div class="row">
+        <div class="row" id="list-product">
             <div class="col-3">
                 <div class="card" style="width: 100%;">
                     <img src="https://mivietnam.vn/wp-content/uploads/2020/12/dien-thoai-xiaomi-mi-10t-pro-avarta-377x470.jpg" class="card-img-top" alt="...">
@@ -37,16 +40,20 @@
                       <h5 class="card-title">Xiaomi Mi 10T Pro 5G</h5>
                       <p>Giá: 12000000đ</p>
                       <p>Hãng sản xuất: Xiaomi</p>
-                      <a href="javascript:;" class="btn btn-warning">Mua ngay</a>
+                      <a href="javascript:;" class="btn btn-warning">Chi tiết</a>
+                      <a href="javascript:;" class="btn btn-success"> <i class="fas fa-shopping-cart"></i> Thêm</a>
                     </div>
                   </div>
             </div>
         </div>
     </main>
 
+    <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="./public/js/common.js"></script>
     <script>
         util.getMenu();
+        util.getProducts('#list-product');
     </script>
 </body>
 </html>
