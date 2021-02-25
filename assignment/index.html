@@ -24,7 +24,7 @@
                         
                     </ul>
                 </div>
-                <button type="button" class="btn btn-info text-white">
+                <button type="button" onclick="util.getCartDetail()" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#detail-cart">
                     <i class="fas fa-shopping-cart"></i> <span class="total-cart-product badge bg-secondary">0</span>
                 </button>
             </div>
@@ -47,6 +47,60 @@
             </div>
         </div>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detail-cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Danh sách sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <th>ID</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Ảnh sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Tổng tiền</th>
+                        </thead>
+                        <tbody id="cart-detail-tbody">
+
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Tên khách hàng</label>
+                                <input type="text" class="form-control" id="customer_name" >
+                            </div>
+                            <div class="form-group">
+                                <label for="">Email khách hàng</label>
+                                <input type="text" class="form-control" id="customer_email" >
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Số điện thoại khách hàng</label>
+                                <input type="text" class="form-control" id="customer_phone_number" >
+                            </div>
+                            <div class="form-group">
+                                <label for="">Địa chỉ</label>
+                                <input type="text" class="form-control" id="customer_address" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

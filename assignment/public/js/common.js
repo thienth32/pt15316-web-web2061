@@ -81,6 +81,32 @@ window.util = {
         });
         // cập nhật lại số hiển thị trên menu
         document.querySelector('.total-cart-product').innerText = totalProduct;
+    },
+    getCartDetail: function(){
+        // lấy dữ liệu cart từ localstorage ra ngoài
+        let cart = localStorage.getItem('cart');
+        // ép kiểu string sang json
+        cart = cart == null ? [] : JSON.parse(cart);
+        let tableContent = ``;
+        let totalMoney = 0;
+        cart.forEach(item => {
+            totalMoney += item.quantity*item.price;
+            tableContent += `<tr>
+                                <td>${item.id}</td>
+                                <td>${item.name}</td>
+                                <td>
+                                    <img src="${item.image}" width="70">    
+                                </td>
+                                <td>${item.price}</td>
+                                <td>${item.quantity}</td>
+                                <td>${item.quantity*item.price}</td>
+                            </tr>`;
+        });
+        tableContent += `<tr>
+                            <td colspan="5">Tổng số tiền</td>
+                            <td>${totalMoney}</td>
+                        </tr>`;
+        document.querySelector('#cart-detail-tbody').innerHTML = tableContent;
     }
 
 }

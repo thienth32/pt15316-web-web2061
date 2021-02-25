@@ -51,15 +51,14 @@
       "customer_email": "thienth@fpt.edu.vn",
       "customer_phone_number": "0987654321",
       "created_date": "",
-      "status": 1
-    }
-  ],
-  "order_details": [
-    {
-      "orderId": 1,
-      "productId": 2,
-      "quantity": 1,
-      "unit_price": 6490000
+      "status": 1,
+      "detail": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "unit_price": 6490000
+        }
+      ]
     }
   ]
 }
